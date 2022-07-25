@@ -39,13 +39,6 @@ def run_flow():
         task.complete()
         workflow.do_engine_steps()
 
-    # Complete Task B3
-    ready_tasks = workflow.get_ready_user_tasks()
-    for task in ready_tasks:
-        pprint('== Complete Task : {task} =='.format(task=task.task_spec.name))
-        task.complete()
-        workflow.do_engine_steps()
-
 
 if __name__ == '__main__':
     run_flow()
